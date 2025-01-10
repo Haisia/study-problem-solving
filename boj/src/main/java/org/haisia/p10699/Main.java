@@ -1,15 +1,10 @@
 package org.haisia.p10699;
 
-import java.math.BigInteger;
-import java.util.Scanner;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 class Main {
   public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
-    BigInteger result = new BigInteger("0");
-    while (sc.hasNextBigInteger()) {
-      result = result.add(sc.nextBigInteger());
-    }
-    System.out.println(result);
+    System.out.println(LocalDateTime.now().format(DateTimeFormatter.ofPattern("YYYY-MM-DD")));
   }
 }
